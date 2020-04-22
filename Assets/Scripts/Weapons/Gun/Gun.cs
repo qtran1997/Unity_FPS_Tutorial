@@ -32,9 +32,7 @@ public class Gun : MonoBehaviour
     {       
         GameObject newBullet = Instantiate(bullet, barrel.position, barrel.localRotation);
         
-        newBullet.transform.SetParent(barrel);
-
-        newBullet.GetComponent<Rigidbody>().velocity = barrel.forward * 20;
+        newBullet.GetComponent<Rigidbody>().velocity = barrel.forward * 45f;
 
         Destroy(newBullet, 2f);
     }
